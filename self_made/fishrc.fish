@@ -7,7 +7,7 @@ function fishrc
     case -s
       source $HOME/.config/fish/config.fish && echo update!
     case -l
-      ls $SELF_MADE_PATH
+      ls -al $SELF_MADE_PATH
     case '*'
       fishrc_other $argv
     end
