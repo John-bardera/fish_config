@@ -10,7 +10,7 @@ balias l "ls"
 balias s "ls"
 balias cpuTemp "osx-cpu-temp"
 balias svgoKeepViewBox "svgo --disable=removeViewBox"
-balias svgoKeepInfo "svgo --config=./.svgo.yml"
+balias svgoKeepInfo "svgo --config=/Users/john/.config/fish/self_made/.svgo.yml"
 
 # twogate
 balias tgstg "env BUILD_ENV=staging npm run serve" # HOUSEGATE
