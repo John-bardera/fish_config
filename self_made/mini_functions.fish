@@ -108,3 +108,13 @@ function m4as2mp3s
   for file in *.m4a; ffmpeg -i $file -f mp3 -b:a 192k (basename $file .m4a).mp3; end
 end
 
+# mv latest N files
+function mvLatest
+  ls -1tr $argv[2] | tail -n $argv[1] | while read file; mv $argv[2]$file $argv[3]; end
+end
+
+# mv latest N files from ~/Downloads/ to current directory
+function mvLFD2CD
+  mvLatest $argv[1] ~/Downloads/ ./
+end
+

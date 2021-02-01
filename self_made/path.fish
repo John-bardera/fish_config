@@ -14,3 +14,7 @@ end
 
 status --is-interactive; and . (rbenv init -|psub)
 fix_path
+
+## bison 3 or newest
+set -x PATH /usr/local/Cellar/bison/3.7.3/bin $PATH
+

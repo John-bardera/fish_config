@@ -11,6 +11,8 @@ balias s "ls"
 balias cpuTemp "osx-cpu-temp"
 balias svgoKeepViewBox "svgo --disable=removeViewBox"
 balias svgoKeepInfo "svgo --config=/Users/john/.config/fish/self_made/.svgo.yml"
+balias dud0m "du -d0 -m"
+balias duH "dud0m ./* | sort -nr | head"
 
 # twogate
 balias tgstg "env BUILD_ENV=staging npm run serve" # HOUSEGATE
@@ -26,6 +28,7 @@ balias metya-tuyo-ios-build "ionic cordova build ios --prod --release --no-inter
 balias pycharm "open -a /Applications/PyCharm.app"
 balias webstorm "open -a /Applications/WebStorm.app"
 balias xcode "open -a xcode.app"
+balias rstudio "open -a /Applications/RStudio.app/"
 
 # git
 balias gs "git status"
@@ -46,3 +49,5 @@ balias cdw "cd ~/Documents/wakayama/lecture"
 balias ssh-pattern-recognition "ssh -p 9022 -Y s236329@ccparallel-2.sys.wakayama-u.ac.jp"
 balias sftp-pattern-recognition "sftp -P 9022 s236329@ccparallel-2.sys.wakayama-u.ac.jp"
 balias sftp-web-design-exercise "sftp -P 60022 s236329@webdesign.center.wakayama-u.ac.jp"
+balias ssh-wakayama "ssh s236329@com.wakayama-u.ac.jp -p 9022 -i .ssh/id_ed25519"
+# balias ssh-laboratory "ssh -p 9111 kuroki@133.42.149.186"
