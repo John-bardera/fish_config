@@ -31,6 +31,8 @@ function code
     if test ! -e $argv[1]
       if test (string split '.' (basename $argv[1]))[-1] = 'tex'
         cp ~/temp.tex $argv[1]
+      else if test (string split '.' (basename $argv[1]))[-1] = 'md'
+        cp ~/temp.md $argv[1]
       end
       touch $argv[1]
     end
@@ -116,5 +118,14 @@ end
 # mv latest N files from ~/Downloads/ to current directory
 function mvLFD2CD
   mvLatest $argv[1] ~/Downloads/ ./
+end
+
+# 'git reset --hard HEAD' wrapper
+function gitResetHardHEAD
+  if test (count $argv) -eq 1
+    git checkout HEAD -- $argv[1]
+  else
+    git reset --hard HEAD
+  end
 end
 
