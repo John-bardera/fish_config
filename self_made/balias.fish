@@ -24,11 +24,11 @@ balias tgbuild2 "npm run ionic:build:ios -- --configuration=stg"
 
 balias metya-tuyo-ios-build "ionic cordova build ios --prod --release --no-interactive --above"
 
+balias hg2StgBuild "bash -c 'export BUILD_ENV=staging && npm run build && npx cap copy && npx cap open ios'"
+
 # applications
-balias pycharm "open -a /Applications/PyCharm.app"
 balias webstorm "open -a /Applications/WebStorm.app"
 balias xcode "open -a xcode.app"
-balias rstudio "open -a /Applications/RStudio.app/"
 
 # git
 balias gs "git status"
@@ -40,6 +40,7 @@ balias gc "git commit -m"
 balias gps "git push origin"
 balias gcd "git checkout"
 balias gback "git reset HEAD~1"
+balias grh "gitResetHardHEAD"
 
 # raspi
 balias rasin-serial "screen /dev/cu.usbserial -s 115200"
