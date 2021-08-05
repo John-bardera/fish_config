@@ -64,7 +64,7 @@ function wav2mp3s
   ;end
 end
 function wav2mp3
-  ffmpeg -i $argv[1] -f mp3 -b:a 192k (string split '.' $argv[1])[1]'.mp3'
+  ffmpeg -i $argv[1] -f mp3 -b:a 192k (basename $argv[1] .wav).mp3
 end
 
 # rabbithouse
@@ -104,10 +104,10 @@ end
 
 # m4a to mp3
 function m4a2mp3
-  ffmpeg -i $argv[1] -acodec libmp3lame -aq 2 (string split '.' $argv[1])[1]'.mp3'
+  ffmpeg -i $argv[1] -acodec libmp3lame -aq 2 (basename $argv[1] .m4a).mp3
 end
 function m4as2mp3s
-  for file in *.m4a; ffmpeg -i $file -f mp3 -b:a 192k (basename $file .m4a).mp3; end
+  for file in *.m4a; m4a2mp3 $file; end
 end
 
 # mv latest N files
@@ -129,3 +129,13 @@ function gitResetHardHEAD
   end
 end
 
+# webm to mp3
+function webm2mp3
+  ffmpeg -n -i $argv[1] -vn -ab 160k -ar 44100 (basename $argv[1] .webm).mp3
+end
+function webms2mp3s
+  for file in *.webm; webm2mp3 $file; end
+end
+function webms2mp3sOverwrite
+  for file in *.webm; ffmpeg -i $file -vn -ab 160k -ar 44100 (basename $file .webm).mp3; end
+end

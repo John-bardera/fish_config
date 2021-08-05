@@ -18,3 +18,6 @@ fix_path
 ## bison 3 or newest
 set PATH /usr/local/Cellar/bison/3.7.3/bin $PATH
 
+## adb
+set PATH /Users/john/Library/Android/sdk/platform-tools $PATH
+
