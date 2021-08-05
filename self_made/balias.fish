@@ -14,18 +14,6 @@ balias svgoKeepInfo "svgo --config=/Users/john/.config/fish/self_made/.svgo.yml"
 balias dud0m "du -d0 -m"
 balias duH "dud0m ./* | sort -nr | head"
 
-# twogate
-balias tgstg "env BUILD_ENV=staging npm run serve" # HOUSEGATE
-balias tgstg2 "npm run ionic:serve:stg" # audiofuide
-balias tgstg3 "env BUILD_ENV=staging npm run start" #J:COM
-balias tgdev3 "env BUILD_ENV=development npm run start" #J:COM
-balias tgbuild "env BUILD_ENV=staging npm run build && ionic cordova build ios"
-balias tgbuild2 "npm run ionic:build:ios -- --configuration=stg"
-
-balias metya-tuyo-ios-build "ionic cordova build ios --prod --release --no-interactive --above"
-
-balias hg2StgBuild "bash -c 'export BUILD_ENV=staging && npm run build && npx cap copy && npx cap open ios'"
-
 # applications
 balias webstorm "open -a /Applications/WebStorm.app"
 balias xcode "open -a xcode.app"
