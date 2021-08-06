@@ -3,15 +3,15 @@ balias metya-tuyo-ios-build "ionic cordova build ios --prod --release --no-inter
 
 ## HOUSEGATE
 function hgBuildStg
-  set _command 'export BUILD_ENV=staging && npm run build && npx cap copy && npx cap open $argv[1]'
+  set _command "export BUILD_ENV=staging && npm run build && npx cap copy && npx cap open $argv[1]"
   bash -c $_command
 end
 function hgBuildProd
-  set _command 'export BUILD_ENV=production && npm run build && npx cap copy && npx cap open $argv[1]'
+  set _command "export BUILD_ENV=production && npm run build && npx cap copy && npx cap open $argv[1]"
   bash -c $_command
 end
 function hgBuildProdProd
-  set _command 'export BUILD_ENV=production && npm run build:prod && npx cap copy && npx cap open $argv[1]'
+  set _command "export BUILD_ENV=production && npm run build:prod && npx cap copy && npx cap open $argv[1]"
   bash -c $_command
 end
 
