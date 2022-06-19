@@ -139,3 +139,10 @@ end
 function webms2mp3sOverwrite
   for file in *.webm; ffmpeg -i $file -vn -ab 160k -ar 44100 (basename $file .webm).mp3; end
 end
+
+# search large file
+function slf
+  dud0m $argv[1]/* | sort -nr | head -n (set -q $argv[2]; and echo 10; or echo $argv[2])
+end
+balias slfc "slf ./"
+

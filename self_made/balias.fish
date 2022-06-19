@@ -27,6 +27,7 @@ balias ga "git add"
 balias gc "git commit -m"
 balias gps "git push origin"
 balias gcd "git checkout"
+balias gcp "git cherry-pick"
 balias gback "git reset HEAD~1"
 balias grh "gitResetHardHEAD"
 
