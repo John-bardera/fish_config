@@ -146,3 +146,10 @@ function slf
 end
 balias slfc "slf ./"
 
+# set brightness
+function brightnessWithDdcctl
+  # 0~100で入力
+  ddcctl -d 1 -b $argv[1]
+  brightness (math $argv[1] / 100)
+end
+

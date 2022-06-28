@@ -13,6 +13,8 @@ balias svgoKeepViewBox "svgo --disable=removeViewBox"
 balias svgoKeepInfo "svgo --config=/Users/john/.config/fish/self_made/.svgo.yml"
 balias dud0m "du -d0 -m"
 balias duH "dud0m ./* | sort -nr | head"
+balias b0 "brightnessWithDdcctl 1"
+balias b1 "brightnessWithDdcctl 100"
 
 # applications
 balias webstorm "open -a /Applications/WebStorm.app"
